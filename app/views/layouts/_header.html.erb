@@ -1,0 +1,15 @@
+<!-- This is a partial file to  support the header in the application.html.erb -->
+<header class="navbar navbar-fixed-top navbar-inverse" id="header">
+      <!-- Insert division into our header -->
+      <div class="container">
+       <!--Use embedded ruby instead of an anchor tag as it allows for
+       the use of named routs -->
+       <%= link_to "sample app", '#', id: "logo" %>
+       <nav>
+         <ul class="nav navbar-nav navbar-right">
+           <li><%= link_to "Home",   '#' %></li>
+           <li><%= link_to "Help",   '#' %></li>
+           <li><%= link_to "Log in", '#' %></li>
+       </nav>
+      </div>
+</header>

@@ -8,34 +8,16 @@
                                             'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application','data-turbolinks-track': 'reload' %>
     
-    <!-- Code to support old browers -->
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+    <!-- Adding in some ruby with render method to link to the shim file -->
+    <%= render 'layouts/shim' %> 
   </head>
   <body>
-    <!-- Add a header that will live inside the body tag and get displayed -->
-    <!-- These css classes name are specific to a css framework called Bootstrap -->
-    <header class="navbar navbar-fixed-top navbar-inverse" id="header">
-          <!-- Insert division into our header -->
-          <div class="container">
-           <!--Use embedded ruby instead of an anchor tag as it allows for
-           the use of named routs -->
-           <%= link_to "sample app", '#', id: "logo" %>
-           <nav>
-             <ul class="nav navbar-nav navbar-right">
-               <li><%= link_to "Home",   '#' %></li>
-               <li><%= link_to "Help",   '#' %></li>
-               <li><%= link_to "Log in", '#' %></li>
-           </nav>
-          </div>
-    </header>
+    <!-- Remove the headder html and put it in a supporting partial -->
+    <%= render 'layouts/header' %> 
     <div class="container">
      <%= yield %> 
+     <!-- footer within the div tag and under the main body of text -->
+     <%= render 'layouts/footer' %>
     </div>
-    
-    
-    
   </body>
 </html>
