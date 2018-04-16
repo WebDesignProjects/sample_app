@@ -1,18 +1,21 @@
+<!-- home page inside a div and use bootstrap classes -->
 <div class="center jumbotron">
   
-  <h1>Sample App Home Page</h1>
+  <h1>Welcome to  Punters Club</h1>
   
   <h2>
-    This is the home page for the sample app.
+    This is the home page for the Punters Club.
     <a href="http://www.tvservices.ie">TV Services Home Page</a>
     Links to tv services web home page.
   </h2>
   
-  <%= link_to "Sign up now", '#', class:"btn btn-lg btn-primary"%>  
+  <%= link_to "Sign up now!", '#', class:"btn btn-lg btn-primary"%><br> 
+  
+  <%= link_to image_tag("Front image.jpg", alt: "Punters Club logo"),
+             'http://rubyonrails.org' %>
 </div>
 
-<%= link_to image_tag("kitten.jpg", alt: "Kitten logo"),
-             'http://rubyonrails.org' %>
+
 
  
 
