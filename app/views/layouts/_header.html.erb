@@ -4,13 +4,13 @@
       <div class="container">
        <!--Use embedded ruby instead of an anchor tag as it allows for
        the use of named routes -->
-       <%= link_to "Punters Club", '#', id: "logo" %>
+       <%= link_to "Punters Club", root_path, id: "logo" %>
        <nav>
          <ul class="nav navbar-nav navbar-right">
           <!-- li link to something -->
-           <li><%= link_to "Home",   '#' %></li>
-           <li><%= link_to "Help",   '#' %></li>
-           <li><%= link_to "Log in", '#' %></li>
+           <li><%= link_to "Home",   root_path %></li>
+           <li><%= link_to "Help",   help_path %></li>
+           <li><%= link_to "Log in", signup_path %></li>
        </nav>
       </div>
 </header>
