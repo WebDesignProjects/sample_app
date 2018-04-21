@@ -1,7 +1,7 @@
 <!-- home page inside a div and use bootstrap classes -->
 <div class="center jumbotron">
   
-  <h1>Welcome to  Punters Club</h1>
+  <h1>Welcome to Punters Club</h1>
   
   <h2>
     This is the home page for the Punters Club.
@@ -9,10 +9,22 @@
     Links to tv services web home page.
   </h2>
   
+  
   <%= link_to "Sign up now!", signup_path, class:"btn btn-lg btn-primary"%><br> 
   
   <%= link_to image_tag("Front image.jpg", alt: "Punters Club logo"),
              'http://rubyonrails.org' %>
+   <nav role="navigation">
+    <div class="inner">
+     <a href="#nav" class="nav-collapse" id="nav-collapse">Menu</a>
+      <ul class="nav" id="nav">
+        <%= render 'devise/menu/registration_items' %>
+        <%= render 'devise/menu/login_items' %>
+     </ul>
+    </div>
+  </nav> 
+         
+            
 </div>
 
 
