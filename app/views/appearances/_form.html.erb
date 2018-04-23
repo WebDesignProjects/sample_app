@@ -1,0 +1,27 @@
+<%= form_with(model: appearance, local: true) do |form| %>
+  <% if appearance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appearance.errors.count, "error") %> prohibited this appearance from being saved:</h2>
+
+      <ul>
+      <% appearance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :race_id %>
+    <%= form.text_field :race_id, id: :appearance_race_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horse_id %>
+    <%= form.text_field :horse_id, id: :appearance_horse_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

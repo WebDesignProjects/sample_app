@@ -10,13 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180420211106) do
+ActiveRecord::Schema.define(version: 20180423113343) do
 
-  create_table "punters", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+  create_table "appearances", force: :cascade do |t|
+    t.integer "race_id"
+    t.integer "horse_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["horse_id"], name: "index_appearances_on_horse_id"
+    t.index ["race_id"], name: "index_appearances_on_race_id"
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "horses", force: :cascade do |t|
+    t.string "name"
+    t.decimal "ranking"
+    t.decimal "probability"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.string "name"
+    t.integer "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_meetings_on_country_id"
+  end
+
+  create_table "races", force: :cascade do |t|
+    t.string "name"
+    t.integer "meeting_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meeting_id"], name: "index_races_on_meeting_id"
   end
 
   create_table "users", force: :cascade do |t|

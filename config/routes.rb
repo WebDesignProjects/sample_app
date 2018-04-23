@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :appearances
+  resources :horses
+  resources :races
+  resources :meetings
+  resources :countries
   devise_for :users
   
  # root  'static_pages#home'
