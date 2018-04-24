@@ -12,6 +12,11 @@ class HorsesController < ApplicationController
   def show
   end
 
+  # GET /horses/1
+  # GET /horses/1.json
+  def stasistics
+  end
+
   # GET /horses/new
   def new
     @horse = Horse.new

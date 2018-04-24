@@ -10,7 +10,8 @@
           <!-- li link to something -->
            <li><%= link_to "Home",   root_path %></li>
            <li><%= link_to "Help",   help_path %></li>
-           <li><%= link_to "Log in", signup_path %></li>
+           <!-- <li><#%= link_to "Log in", signup_path %></li> -->
+           <%= render 'devise/menu/login_items' %>
        </nav>
       </div>
 </header>
