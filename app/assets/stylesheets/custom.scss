@@ -31,6 +31,10 @@ textarea {
 .center h1 {
   margin-bottom: 60px;
 }
+ 
+.center h2 {
+  margin-bottom: 60px;
+}
 
 /* typography */
 
@@ -43,12 +47,33 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  background: #eee;
+  padding: 20px;
+  color: #17a2b8 ;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 3em;
   letter-spacing: -1px;
   margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+th {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+td {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
   text-align: center;
   font-weight: normal;
   color: $gray-light;
@@ -65,10 +90,25 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #28a745;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 15px;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+#hlinks {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #28a745;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 15px;
   font-weight: bold;
   &:hover {
     color: #fff;
