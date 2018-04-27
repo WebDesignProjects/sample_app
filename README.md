@@ -1,5 +1,5 @@
-# Ruby on Rails Tutorial
+# Punters Clup
 
-This is a sample application
+Web application
 
 
