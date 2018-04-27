@@ -1,4 +1,4 @@
-# Punters Clup
+# Punters Club
 
 Web application
 
